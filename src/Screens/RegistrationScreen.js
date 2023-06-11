@@ -36,6 +36,12 @@ export const RegistrationScreen = () => {
     Keyboard.dismiss();
   };
 
+  const onFormSubmit = () => {
+    hideKeyboard();
+    console.log(formData);
+    setFormData(basicFormState);
+  };
+
   return (
     <TouchableWithoutFeedback onPress={() => hideKeyboard()}>
       <View style={styles.container}>
@@ -125,10 +131,7 @@ export const RegistrationScreen = () => {
           <TouchableOpacity
             activeOpacity={1}
             style={styles.btn}
-            onPress={() => {
-              hideKeyboard();
-              setFormData(basicFormState);
-            }}
+            onPress={onFormSubmit}
           >
             <Text style={styles.btnText}>Зареєструватися</Text>
           </TouchableOpacity>

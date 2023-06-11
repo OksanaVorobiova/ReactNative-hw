@@ -29,6 +29,12 @@ export const LoginScreen = () => {
     Keyboard.dismiss();
   };
 
+  const onFormSubmit = () => {
+    hideKeyboard();
+    console.log(formData);
+    setFormData(basicFormState);
+  };
+
   return (
     <TouchableWithoutFeedback onPress={() => hideKeyboard()}>
       <View style={{ ...styles.container, justifyContent: "flex-start" }}>
@@ -91,10 +97,7 @@ export const LoginScreen = () => {
           <TouchableOpacity
             activeOpacity={1}
             style={styles.btn}
-            onPress={() => {
-              hideKeyboard();
-              setFormData(basicFormState);
-            }}
+            onPress={onFormSubmit}
           >
             <Text style={styles.btnText}>Увійти</Text>
           </TouchableOpacity>
