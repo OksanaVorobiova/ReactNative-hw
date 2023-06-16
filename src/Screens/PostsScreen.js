@@ -1,15 +1,15 @@
 import React from "react";
-import { StyleSheet, View, ImageBackground } from "react-native";
+import { StyleSheet, View, ImageBackground, Image, Text } from "react-native";
 import { bgImgStyles } from "../styles/bg-img";
 
 export const PostsScreen = () => {
   return (
-    <ImageBackground
-      source={require("../../assets/bg.png")}
-      resizeMode="cover"
-      style={bgImgStyles.background}
-    >
-      <View></View>
-    </ImageBackground>
+    <View style={{ backgroundColor: "#fff" }}>
+      <View>
+        <Image />
+        <Text></Text>
+        <Text></Text>
+      </View>
+    </View>
   );
 };

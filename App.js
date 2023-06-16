@@ -66,34 +66,7 @@ export default function App() {
           component={LoginScreen}
           options={{ headerShown: false }}
         />
-        <MainStack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            title: "Публікації",
-            headerTitleAlign: "center",
-            headerStyle: {
-              borderBottomColor: "#bdbdbd",
-              borderBottomWidth: 1,
-            },
-            headerTintColor: "#212121",
-            headerTitleStyle: {
-              fontFamily: "Medium",
-              fontSize: 17,
-            },
-            headerLeft: null,
-            headerRight: () => {
-              return (
-                <View>
-                  <Image
-                    source={require("./assets/log-out.png")}
-                    style={headerStyle.logout}
-                  />
-                </View>
-              );
-            },
-          }}
-        />
+        <MainStack.Screen name="Home" component={Home} options={{headerShown: false}} />
       </MainStack.Navigator>
     </NavigationContainer>
   );
